@@ -25,7 +25,7 @@ export const brandIntakeSchema = z.object({
   expresionesNaturales: z.array(z.string()).min(15, 'Necesitamos mínimo 15 expresiones'),
   prohibiciones: z.array(z.string()).min(10, 'Necesitamos mínimo 10 prohibiciones'),
   nivelFormalidad: z.number().min(1).max(10),
-  usoHumor: z.string().min(5),
+  usoHumor: z.enum(['Alto', 'Moderado', 'Bajo', 'Sin humor']),
   regionalismos: z.string().optional(),
   temasSensibles: z.string().optional(),
   pilares: z
